@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Font Size Variables */
+    --text-responsive-10-12: clamp(
+      0.625rem,
+      0.5892857142857143rem + 0.17857142857142858vw,
+      0.75rem
+    );
+
+    --text-responsive-12-14: clamp(
+      0.75rem,
+      0.7142857142857143rem + 0.17857142857142858vw,
+      0.875rem
+    );
+
+    --text-responsive-14-18: clamp(
+      0.875rem,
+      0.8035714285714286rem + 0.35714285714285715vw,
+      1.125rem
+    );
+
+    --text-responsive-18-20: clamp(
+      1.125rem,
+      1.0892857142857142rem + 0.17857142857142858vw,
+      1.25rem
+    );
+
+    --text-responsive-20-24: clamp(1.25rem, 1.1785714285714286rem + 0.35714285714285715vw, 1.5rem);
+    --text-responsive-24-28: clamp(1.5rem, 1.4285714285714286rem + 0.35714285714285715vw, 1.75rem);
+    --text-responsive-28-32: clamp(1.75rem, 1.6785714285714286rem + 0.35714285714285715vw, 2rem);
+  }
+}

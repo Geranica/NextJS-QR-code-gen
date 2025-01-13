@@ -24,6 +24,7 @@ const GenerateQRCodeFromTextForm = () => {
               <FormTextArea
                 formField={FORM_FIELDS.TEXT}
                 id={FORM_FIELDS_ATTRIBUTES[FORM_FIELDS.TEXT].ID}
+                placeholder={dictionary.inputTextPlaceholder}
               />
               <Button
                 content={dictionary.createQRCode}

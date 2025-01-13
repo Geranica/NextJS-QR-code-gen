@@ -29,13 +29,22 @@ interface FormTextAreaProps extends VariantProps<typeof formTextAreaVariants> {
   className?: string;
   id: string;
   formField: string;
+  placeholder?: string;
 }
 
-const FormTextArea = ({ className, id, formField, size, variant }: FormTextAreaProps) => {
+const FormTextArea = ({
+  className,
+  id,
+  formField,
+  size,
+  variant,
+  placeholder,
+}: FormTextAreaProps) => {
   const { register } = useFormContext();
 
   return (
     <textarea
+      placeholder={placeholder}
       className={cn(formTextAreaVariants({ size, variant, className }))}
       id={id}
       {...register(formField)}
