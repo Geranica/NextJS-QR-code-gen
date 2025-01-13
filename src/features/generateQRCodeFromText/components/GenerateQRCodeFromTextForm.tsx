@@ -8,6 +8,8 @@ import FormTextArea from '@/components/form/FormTextArea';
 import Button from '@/components/Button';
 
 import { dictionary } from '@/shared/ditctionary';
+import GenerateLogoForQRCode from '@/features/generateLogoForQRCode/GenerateLogoForQRCode';
+
 import { useGenerateQRCodeFromTextForm } from '../hooks/useGenerateQRCodeFromTextForm';
 
 import { FORM_FIELDS, FORM_FIELDS_ATTRIBUTES } from '../constants';
@@ -25,6 +27,10 @@ const GenerateQRCodeFromTextForm = () => {
                 formField={FORM_FIELDS.TEXT}
                 id={FORM_FIELDS_ATTRIBUTES[FORM_FIELDS.TEXT].ID}
                 placeholder={dictionary.inputTextPlaceholder}
+              />
+              <GenerateLogoForQRCode
+                id={FORM_FIELDS_ATTRIBUTES[FORM_FIELDS.LOGO].ID}
+                formField={FORM_FIELDS.LOGO}
               />
               <Button
                 content={dictionary.createQRCode}

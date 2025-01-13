@@ -1,47 +1,34 @@
 import { createStore } from 'zustand/vanilla';
-import { persist } from 'zustand/middleware';
 
 interface QRCodeState {
   text: string;
-  hydrated: boolean;
+  logo: string;
 }
 
 interface QRCodeActions {
   setText: (text: string) => void;
-  setHydrated: () => void;
+  setLogo: (logoStr: string) => void;
 }
 
 export type QRCodeStore = QRCodeState & QRCodeActions;
 
 export const defaultInitState: QRCodeState = {
   text: '',
-  hydrated: false,
+  logo: '',
 };
 
 export const createQRCodeStore = (initState: QRCodeState = defaultInitState) => {
-  return createStore<QRCodeStore>()(
-    persist(
-      (set) => ({
-        ...initState,
-        setText: (text: string) => {
-          set({
-            text,
-          });
-        },
-        setHydrated: () => {
-          set({
-            hydrated: true,
-          });
-        },
-      }),
-      {
-        name: 'generate-qr-code-from-text-store ',
-        onRehydrateStorage: () => {
-          return (state, error) => {
-            if (!error) state?.setHydrated();
-          };
-        },
-      },
-    ),
-  );
+  return createStore<QRCodeStore>()((set) => ({
+    ...initState,
+    setText: (text: string) => {
+      set({
+        text,
+      });
+    },
+    setLogo: (logoStr: string) => {
+      set({
+        logo: logoStr,
+      });
+    },
+  }));
 };
