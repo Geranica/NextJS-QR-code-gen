@@ -3,7 +3,7 @@ import LayoutContainer from '@/components/LayoutContainer';
 
 import ContentWrapper from '@/components/ContentWrapper';
 import GenerateQRCodeFromTextForm from './components/GenerateQRCodeFromTextForm';
-import GeneratorQRCodeFromText from './components/GeneratorQRCodeFromText';
+import QRCodeFromText from './components/QRCodeFromText';
 
 const GenerateQRCodeFromTextPage = () => {
   return (
@@ -11,7 +11,7 @@ const GenerateQRCodeFromTextPage = () => {
       <LayoutContainer>
         <ContentWrapper className="grid gap-4 grid-cols-1 md:grid-cols-2">
           <GenerateQRCodeFromTextForm />
-          <GeneratorQRCodeFromText />
+          <QRCodeFromText />
         </ContentWrapper>
       </LayoutContainer>
     </LayoutMain>

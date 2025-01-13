@@ -7,13 +7,13 @@ import { cn } from '@/utils/cn';
 const textVariants = cva('font-inter', {
   variants: {
     size: {
-      small: 'text-responsive-10-12 leading-5',
-      regular: 'text-responsive-12-14 leading-6',
+      small: 'text-responsive-10-12',
+      regular: 'text-responsive-12-14',
       medium: 'text-responsive-14-18',
-      large: 'text-responsive-18-20 leading-7',
-      extraLarge: 'text-responsive-20-24 leading-8',
-      huge: 'text-responsive-24-28 leading-9',
-      enormous: 'text-responsive-28-32 leading-10',
+      large: 'text-responsive-18-20',
+      extraLarge: 'text-responsive-20-24',
+      huge: 'text-responsive-24-28',
+      enormous: 'text-responsive-28-32',
     },
     variant: {
       primary: 'text-gray-900 font-medium',
