@@ -4,4 +4,6 @@ export const dictionary = {
   inputTextPlaceholder: 'Enter text here',
   fileSizeInKB: (size: string | number) => `File size: ${size} KB`,
   fileName: (name: string) => `File name: ${name}`,
+  downloadAsSvg: 'Download as SVG',
+  download: 'Download',
 } as const;
