@@ -14,10 +14,13 @@ const buttonVariants = cva(
         extraLarge: 'text-xl',
       },
       variant: {
-        primary: 'bg-blue-500 text-white hover:bg-blue-600',
-        secondary: 'bg-gray-500 text-white hover:bg-gray-600',
-        danger: 'bg-red-500 text-white hover:bg-red-600',
-        outline: 'border border-blue-500 text-blue-500 hover:bg-blue-100',
+        primary:
+          'bg-blue-500 text-white hover:bg-blue-600 disabled:bg-blue-200 disabled:text-gray-500',
+        secondary:
+          'bg-gray-500 text-white hover:bg-gray-600 disabled:bg-gray-300 disabled:text-gray-500',
+        danger: 'bg-red-500 text-white hover:bg-red-600 disabled:bg-red-200 disabled:text-gray-500',
+        outline:
+          'border border-blue-500 text-blue-500 hover:bg-blue-100 disabled:bg-gray-200 disabled:text-gray-500',
       },
     },
     defaultVariants: {

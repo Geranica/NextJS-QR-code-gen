@@ -23,6 +23,7 @@ const eslintConfig = compat.config({
     'prettier',
     'plugin:prettier/recommended',
     'next/typescript',
+    'plugin:jsx-a11y/recommended',
   ],
   plugins: [
     '@typescript-eslint',
@@ -30,6 +31,7 @@ const eslintConfig = compat.config({
     '@stylistic/eslint-plugin',
     'react',
     'prettier',
+    'jsx-a11y',
   ],
   parserOptions: {
     project: ['./tsconfig.json'],
