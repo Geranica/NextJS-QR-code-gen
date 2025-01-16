@@ -5,7 +5,7 @@ import { downloadSvg } from '../helpers/downloadSvg';
 
 export const useDownloadQRCode = () => {
   const qrCodeRef = useQRCodeStore((store) => store.qrCodeRef);
-  const isQRCodeValue = Boolean(useQRCodeStore((store) => store.text));
+  const isQRCodeValue = Boolean(useQRCodeStore((store) => store.value));
 
   const handleDownloadQRCode = () => {
     if (!qrCodeRef || !qrCodeRef.current === null) return;

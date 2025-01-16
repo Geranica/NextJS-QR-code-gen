@@ -1,5 +1,7 @@
+'use client';
+
 import ContentWrapper from '@/components/ContentWrapper';
-import { useFormContext } from 'react-hook-form';
+import { useFormContext, useWatch } from 'react-hook-form';
 
 import { bytesToKB } from '@/utils/convert/bytesToKB';
 
@@ -12,9 +14,8 @@ interface ImageMetadataProps {
 }
 
 const ImageMetadata = ({ formField }: ImageMetadataProps) => {
-  const { watch } = useFormContext();
-
-  const logoValue = watch(formField) ?? [];
+  const { control } = useFormContext();
+  const logoValue = useWatch({ control, name: formField }) ?? [];
 
   const logoName = logoValue[0]?.name;
   const logoSize = logoValue[0]?.size ? bytesToKB(logoValue[0]?.size).toFixed(2) : null;

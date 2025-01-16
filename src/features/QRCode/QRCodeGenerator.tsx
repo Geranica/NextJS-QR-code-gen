@@ -9,25 +9,17 @@ import { useQRCodeGenerator } from './hooks/useQRCodeGenerator';
 interface QRCodeGeneratorProps {
   value: string;
   logoSrc: string;
-  logoHeight: number;
-  logoWidth: number;
   logoExcavate: boolean;
 }
 
-const QRCodeGenerator = ({
-  value,
-  logoSrc,
-  logoHeight,
-  logoWidth,
-  logoExcavate,
-}: QRCodeGeneratorProps) => {
+const QRCodeGenerator = ({ value, logoSrc, logoExcavate }: QRCodeGeneratorProps) => {
   const { qrCodeRef } = useQRCodeGenerator();
 
   const imageSettings = logoSrc
     ? {
         src: logoSrc,
-        height: logoHeight,
-        width: logoWidth,
+        height: 30,
+        width: 30,
         excavate: logoExcavate,
       }
     : undefined;
@@ -39,6 +31,7 @@ const QRCodeGenerator = ({
         className="w-full h-full"
         imageSettings={imageSettings}
         ref={qrCodeRef}
+        level="Q"
       />
     </ContentWrapper>
   );

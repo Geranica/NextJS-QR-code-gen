@@ -6,7 +6,7 @@ import { useQRCodeStore } from '@/features/QRCode/useQRCodeStore';
 
 import ContentWrapper from '@/components/ContentWrapper';
 
-const QRCodeFromText = () => {
+const QRCodeFromUrl = () => {
   const value = useQRCodeStore((store) => store.value);
   const logo = useQRCodeStore((store) => store.logo);
 
@@ -21,4 +21,4 @@ const QRCodeFromText = () => {
   );
 };
 
-export default QRCodeFromText;
+export default QRCodeFromUrl;

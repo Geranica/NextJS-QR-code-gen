@@ -2,13 +2,13 @@ import { createStore } from 'zustand/vanilla';
 import { RefObject } from 'react';
 
 interface QRCodeState {
-  text: string;
+  value: string;
   logo: string;
   qrCodeRef: RefObject<SVGSVGElement | null>;
 }
 
 interface QRCodeActions {
-  setText: (text: string) => void;
+  setValue: (value: string) => void;
   setLogo: (logoStr: string) => void;
   setQRCodeRef: (ref: RefObject<SVGSVGElement | null>) => void;
 }
@@ -16,7 +16,7 @@ interface QRCodeActions {
 export type QRCodeStore = QRCodeState & QRCodeActions;
 
 export const defaultInitState: QRCodeState = {
-  text: '',
+  value: '',
   logo: '',
   qrCodeRef: { current: null },
 };
@@ -24,9 +24,9 @@ export const defaultInitState: QRCodeState = {
 export const createQRCodeStore = (initState: QRCodeState = defaultInitState) => {
   return createStore<QRCodeStore>()((set) => ({
     ...initState,
-    setText: (text: string) => {
+    setValue: (value: string) => {
       set({
-        text,
+        value,
       });
     },
     setLogo: (logoStr: string) => {
