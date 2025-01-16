@@ -18,9 +18,9 @@ const textVariants = cva('font-inter', {
     variant: {
       primary: 'text-gray-900 font-medium',
       secondary: 'text-gray-600 font-light',
-      danger: 'text-red-600 font-bold',
       muted: 'text-gray-400',
       highlight: 'text-yellow-500 font-semibold',
+      error: 'text-red-600 font-medium',
     },
   },
   defaultVariants: {

@@ -13,7 +13,7 @@ import { useQRCodeStore } from '../QRCode/useQRCodeStore';
 const DownloadQRCodeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const isQRCodeValue = Boolean(useQRCodeStore((store) => store.text));
+  const isQRCodeValue = Boolean(useQRCodeStore((store) => store.value));
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);

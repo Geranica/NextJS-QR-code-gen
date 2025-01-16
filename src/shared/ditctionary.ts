@@ -6,4 +6,5 @@ export const dictionary = {
   fileName: (name: string) => `File name: ${name}`,
   downloadAsSvg: 'Download as SVG',
   download: 'Download',
+  url: 'URL',
 } as const;
